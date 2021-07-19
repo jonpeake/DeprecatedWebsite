@@ -1,0 +1,128 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+[[main]]
+  name = "Home"
+  url = "#hero"
+  weight = 10
+
+[[main]]
+  name = "About"
+  identifier = "About"
+  url = "/about/"
+  weight = 20
+#  has_children = true
+
+#[[main]]
+#  parent = "About"
+#  name = "Overview"
+#  url = "/about/"
+#  weight = 20
+
+#[[main]]
+#  parent = "About"
+#  name = "Education"
+#  url = "/about/#education"
+#  weight = 21
+  
+#[[main]]
+#  parent = "About"
+#  name = "Research and Laboratory Experience"
+#  url = "/about/#experience"
+#  weight = 22
+  
+#[[main]]
+#  parent = "About"
+#  name = "Teaching Experience"
+#  url = "/about/#teaching"
+#  weight = 23
+  
+#[[main]]
+#  parent = "About"
+#  name = "Honors and Awards"
+#  url = "/about/#awards"
+#  weight = 24
+  
+# [[main]]
+#  parent = "About"
+#  name = "Posters and Presentations"
+#  url = "/about/#posters-presentations"
+#  weight = 25
+  
+#[[main]]
+#  parent = "About"
+#  name = "Skills"
+#  identifier = "Skills"
+#  url = "/about/#skills"
+#  has_children = true
+#  weight = 26
+  
+[[main]]
+  name = "Posts"
+  url = "/post/"
+  weight = 30
+
+[[main]]
+  name = "Projects"
+  url = "/project/"
+  weight = 40
+  
+[[main]]
+  parent = "Projects"
+  name = "Metacommunity Dynamics"
+  url = "/project/metacommunity-project"
+  weight = 41
+  
+[[main]]
+  parent = "Projects"
+  name = "Forage Fish Community Dynamics"
+  url = "/project/foragefish-project"
+  weight = 42
+
+[[main]]
+  parent = "Projects"
+  name = "Pinfish Population Dynamics"
+  url = "/project/pinfish-project"
+  weight = 43
+
+[[main]]
+  parent = "Projects"
+  name = "Lionfish Feeding Ecology"
+  url = "/project/lionfish-project"
+  weight = 44
+  
+[[main]]
+  name = "Publications"
+  url = "/publication/"
+  weight = 50
+
+[[main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 60
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+[[main]]
+  name = "CV"
+  url = "files/Peake_CV_2021.pdf"
+  weight = 70
+
+[[main]]
+  name = "More..."
+  url = "#"
+  hasChildren = true
+
+[[main]]
+  parent = "More..."
+  name = "USF Fish Ecology Lab"
+  url = "https://www.marine.usf.edu/fishecology/"
+
+[[main]]
+  parent = "More..."
+  name = "USF College of Marine Science"
+  url = "https://www.marine.usf.edu/"
+
+
