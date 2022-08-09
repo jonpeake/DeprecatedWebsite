@@ -111,17 +111,17 @@
   weight = 70
 
 [[main]]
-  name = "More..."
+  name = "Affilated Websites"
   url = "#"
   hasChildren = true
 
 [[main]]
-  parent = "More..."
+  parent = "Affilated Websites"
   name = "USF Fish Ecology Lab"
   url = "https://www.marine.usf.edu/fishecology/"
 
 [[main]]
-  parent = "More..."
+  parent = "Affilated Websites"
   name = "USF College of Marine Science"
   url = "https://www.marine.usf.edu/"
 

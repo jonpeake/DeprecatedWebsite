@@ -4,7 +4,7 @@
 
 <div class="universal-wrapper">
   <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-10">
 
       {{ with .Content }}
       <div class="article-style" itemprop="articleBody">{{ . }}</div>
@@ -15,7 +15,7 @@
         {{ $year := print (.Date.Format "2006") }}
         {{ $.Scratch.SetInMap "years" $year $year }}
       {{ end }}
-
+<!--
       <div class="form-row mb-4">
         <div class="col-auto">
           <input type="search" class="filter-search" placeholder="{{ i18n "search_placeholder" }}" autocapitalize="off"
@@ -46,7 +46,7 @@
           </select>
         </div>
       </div>
-
+-->
       <div id="container-publications">
         {{ range .Pages.ByDate.Reverse }}
 

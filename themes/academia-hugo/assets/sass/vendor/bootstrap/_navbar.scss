@@ -70,9 +70,11 @@
     padding-left: 0;
   }
 
-  .dropdown-menu {
+  .dropdown-menu,
+  .dropdown-menu-right{
     position: static;
-    float: none;
+    float: left;
+    white-space: normal;
   }
 }
 
@@ -153,7 +155,8 @@
         .navbar-nav {
           flex-direction: row;
 
-          .dropdown-menu {
+          .dropdown-menu,
+          .dropdown-menu-right{
             position: absolute;
           }
 

@@ -17,10 +17,12 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: auto;
+  right: auto;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
+  white-space: pre-line;
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y 0;
   margin: $dropdown-spacer 0 0; // override default ul
@@ -35,22 +37,13 @@
   @include box-shadow($dropdown-box-shadow);
 }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-    .dropdown-menu#{$infix}-left {
-      right: auto;
-      left: 0;
-    }
-
-    .dropdown-menu#{$infix}-right {
-      right: 0;
-      left: auto;
-    }
+.dropdown-menu-right {
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+    display: none;
   }
 }
-
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
 // Just add .dropup after the standard .dropdown class and you're set.
 .dropup {
@@ -100,9 +93,11 @@
   }
 }
 
+
 // When enabled Popper.js, reset basic dropdown position
 // stylelint-disable-next-line no-duplicate-selectors
-.dropdown-menu {
+.dropdown-menu,
+.dropdown-menu-right {
   &[x-placement^="top"],
   &[x-placement^="right"],
   &[x-placement^="bottom"],
@@ -128,7 +123,7 @@
   font-weight: $font-weight-normal;
   color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
-  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  white-space: normal; // prevent links from randomly breaking onto new lines
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s
 
@@ -169,7 +164,9 @@
   }
 }
 
-.dropdown-menu.show {
+.dropdown-menu.show,
+.dropdown-menu-right.show{
+  white-space: normal;
   display: block;
 }
 
@@ -186,6 +183,7 @@
 // Dropdown text
 .dropdown-item-text {
   display: block;
+  white-space: normal;
   padding: $dropdown-item-padding-y $dropdown-item-padding-x;
   color: $dropdown-link-color;
 }
